@@ -49,7 +49,6 @@ namespace HaxterOS.SystemFiles.Command
                     }
                 case "gui":
                     {
-                        GUI gui = new GUI();
                         break;
                     }
                 case "meme":
