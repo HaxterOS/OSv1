@@ -10,7 +10,7 @@ namespace HaxterOS.SystemFiles.Command
     class CommandProcessor
     {
         private string[] cmds = {"help","about","gui","meme"};
-
+        List<String> x = new List<string>();
 
         public CommandProcessor()
         {}
