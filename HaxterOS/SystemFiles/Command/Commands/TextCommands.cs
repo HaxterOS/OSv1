@@ -34,10 +34,11 @@ Credits:
             Tree tree = new Tree();
             return tree.getCmdArgs(num);
         }
-        public string Ftree()
+        public string Ftree(string input)
         {
             Tree tree = new Tree();
-            return tree.getCmdArgs();
+            tree.exec(input);
+            return "Tree executed";
         }
         public TextCommands()
         {

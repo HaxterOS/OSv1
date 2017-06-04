@@ -8,8 +8,8 @@ namespace HaxterOS.SystemFiles.Command.Commands
 {
     class Tree : ICommand
     {
-        string[] args = {"Hello","I", "Am","An","Arg"};
-
+        string[] args = { "Hello", "I", "Am", "An", "Arg" };
+        string CurrentArg = "";
         public string getCmdArgs()
         {
             string argsI = "ARGS: ";
@@ -23,9 +23,10 @@ namespace HaxterOS.SystemFiles.Command.Commands
         {
             return args[ArgNum];
         }
-        public void exec(string args)
+        public void exec(string input)
         {
-
+            CurrentArg = input.Trim().Split(' ')[1];
+            Console.WriteLine(CurrentArg);
         }
     }
 }

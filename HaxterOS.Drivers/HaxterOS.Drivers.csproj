@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9D41CE85-ACAE-4DD4-A659-43F02B1EB5DA}</ProjectGuid>
+    <ProjectGuid>{88F87598-2A95-4DCC-8547-89134A68FC83}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HaxterOS</RootNamespace>
-    <AssemblyName>HaxterOS</AssemblyName>
+    <RootNamespace>HaxterOS.Drivers</RootNamespace>
+    <AssemblyName>HaxterOS.Drivers</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
@@ -33,32 +33,23 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cosmos.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.Core.Memory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.Core.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.Debug.Kernel.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.HAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
+    <Reference Include="Cosmos.System.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Cosmos.System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
     <Reference Include="Cosmos.Debug.Kernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Kernel.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="SystemFiles\Command\CommandProcessor.cs" />
-    <Compile Include="SystemFiles\Command\Commands\ICommand.cs" />
-    <Compile Include="SystemFiles\Command\Commands\Memes.cs" />
-    <Compile Include="SystemFiles\Command\Commands\Nano.cs" />
-    <Compile Include="SystemFiles\Command\Commands\TextCommands.cs" />
-    <Compile Include="SystemFiles\Command\Commands\Tree.cs" />
-    <Compile Include="SystemFiles\Desktop.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SystemFiles\FileSystem\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HaxterOS.Drivers\HaxterOS.Drivers.csproj">
-      <Project>{88f87598-2a95-4dcc-8547-89134a68fc83}</Project>
-      <Name>HaxterOS.Drivers</Name>
-    </ProjectReference>
+    <Compile Include="MouseDriver.cs" />
+    <Compile Include="VGADriver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

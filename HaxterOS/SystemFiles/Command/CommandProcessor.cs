@@ -30,7 +30,7 @@ namespace HaxterOS.SystemFiles.Command
         public void runCommand(string cmd)
         {
             
-            switch (cmd)
+            switch (cmd.Trim().Split(' ')[0])
             {
                 case "help":
                     {
@@ -57,7 +57,8 @@ namespace HaxterOS.SystemFiles.Command
                     }
                 case "tree":
                     {
-                        Console.WriteLine(txtCmd.Ftree());
+                        Console.WriteLine(txtCmd.Ftree(cmd));
+
                         break;
                     }
             }
