@@ -44,8 +44,10 @@
     <Compile Include="Kernel.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="SystemFiles\Command\CommandProcessor.cs" />
+    <Compile Include="SystemFiles\Command\Commands\ICommand.cs" />
     <Compile Include="SystemFiles\Command\Commands\Memes.cs" />
     <Compile Include="SystemFiles\Command\Commands\TextCommands.cs" />
+    <Compile Include="SystemFiles\Command\Commands\Tree.cs" />
     <Compile Include="SystemFiles\Desktop.cs" />
   </ItemGroup>
   <ItemGroup>

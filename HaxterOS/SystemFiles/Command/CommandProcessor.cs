@@ -9,19 +9,17 @@ namespace HaxterOS.SystemFiles.Command
 {
     class CommandProcessor
     {
-        private string[] cmds = {"help","about","gui","meme"};
+        private string[] cmds = {"help","about","gui","meme","tree"};
         List<String> x = new List<string>();
 
         public CommandProcessor()
         {}
 
-
-
         public bool commandChecker(string cmd)
         {
             for (int x = 0;x<=cmds.Length; x++)
             {
-                if(cmds[x] == cmd)
+                if(cmd.IndexOf(cmds[x]) != 0)
                 {
                     return true;
                 }
@@ -49,11 +47,17 @@ namespace HaxterOS.SystemFiles.Command
                     }
                 case "gui":
                     {
+                        Console.WriteLine("GUI is not functional and has been removed until fixed");
                         break;
                     }
                 case "meme":
                     {
                         Console.WriteLine(txtCmd.meme());   
+                        break;
+                    }
+                case "tree":
+                    {
+                        Console.WriteLine(txtCmd.Ftree());
                         break;
                     }
             }

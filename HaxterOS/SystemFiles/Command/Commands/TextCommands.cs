@@ -29,9 +29,21 @@ Credits:
             Memes m = new Memes();
             return m.getMeme();
         }
+        public string Ftree(int num )
+        {
+            Tree tree = new Tree();
+            return tree.getCmdArgs(num);
+        }
+        public string Ftree()
+        {
+            Tree tree = new Tree();
+            return tree.getCmdArgs();
+        }
         public TextCommands()
         {
 
         }
+
+
     }
 }

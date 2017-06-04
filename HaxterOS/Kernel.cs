@@ -14,14 +14,14 @@ namespace HaxterOS
         CommandProcessor cmd = new CommandProcessor();
         protected override void BeforeRun()
         {
-            Console.WriteLine("HaxterOS booted successfully. Type 'help' for commands");
+            Console.WriteLine("HaxterOS booted successfully. Type 'help' for commands.");
            
         }
 
         protected override void Run()
         {           
             desktop.Logo();
-
+            
             while (true)
             {
                 Console.Write("> ");
